@@ -61,6 +61,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
 
 data "azurerm_client_config" "current" {}
 
+//This is optional as it is already defined in line 34
 data "azurerm_resource_group" "node_rg" {
   depends_on = [
     azurerm_kubernetes_cluster.aks
